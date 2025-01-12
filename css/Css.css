@@ -13,38 +13,130 @@ body
     width:100%;
     font-size:20px;
     height:50px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+.options
+{
+    color:rgba(255, 255, 255, 0.518);
+    transition: 0.2s;
+}
+.options:hover
+{
+    color:rgb(255, 255, 255);
+    font-size:26px;
+}
+.gallary
+{
+    color:rgba(255, 255, 255, 0.518);
+    display:flex;
+    align-items: center;
+   
+    transition:0.2s;
+}
+.linkOpts
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 250px;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.639);
+    z-index: 1;
+}
+.linkOpts label 
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.gallDrop
+{
+    position:relative;
+    display:inline-block;
+    text-decoration: center;
+}
+.gallDrop:hover .linkOpts 
+{
+    display: block;
+}
+.l1
+{
+    background-color:rgb(255,255,255);
+    transition:0.2s
+}
+.l1:hover
+{
+    background-color: rgba(51, 0, 255, 0.318);
+}
+.gallDrop:hover .gallary
+{
+    color:rgb(255, 255, 255);
+    font-size:26px;
 }
 .quote
 {
     
     display:flex;
-    justify-content: center;
     align-items: center;
     height:100%;
-    background-color: rgb(51, 0, 255);
-    color:rgb(252, 252, 252);
+    background-color: rgba(51, 0, 255,0.8);
+    color:rgb(255, 255, 255);
     font-size:25px;
     padding-left:30px;
     padding-right:30px;
-    transition:font-size 0.2s ease-in-out,color 0.2s ease-in-out;
+    transition:0.2s;
+}
+.phone
+{
+    transition:0.2s;
+    padding-left:8px;
+    font-size:15px;
+    color:rgba(255, 255, 255, 0.262);
+}
+.email
+{
+    transition:0.2s;
+    padding-right:8px;
+    font-size:15px;
+    color:rgba(255, 255, 255, 0.262);
+    border-right:3px solid rgba(255, 255, 255, 0.256);
+}
+.phone:hover
+{
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+}
+.email:hover
+{
+    font-size: 18px;
+    color:rgb(255, 255, 255);
+}
+.borderL
+{
+    color:rgba(255, 255, 255, 0.09);
 }
 .quote:hover
 {
-    font-size:28px;
-    color:rgb(0,0,0)
+    font-size:26px;
+    font-weight: bold;
+    color:rgb(18, 18, 18);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(51, 0, 255);
 }
 .info
 {
-    margin-left: auto;
-    padding-right:60px;
+    
+    padding-right:30px;
 }
 .menu
 {
-    display:absolute;
+    display:block;
+    position:absolute;
     margin-top:50px;
-   
+    background-color:rgb(51, 0, 255);
+    width:100%;
 }
 .image
 {
