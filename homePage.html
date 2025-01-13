@@ -2,12 +2,17 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/Css.css">
+        
         <title>WS-Pools</title></head>
     <body>
-        
+        <link href="https://fonts.googleapis.com/css?family=REM:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
             <div class="header">
-                <div class="quote">
-                    <label">Get a quote</label>
+                <div class="gallDrop" style="background-color: rgb(51, 0, 255); height:100%;">
+                    <label class="quote"style="margin-top:10px;">Get a quote</label>
+                    <div class="linkOpts">
+                        <label class="l1">Online Quote</label>
+                        <label class="l1">Book a Quote</label>
+                    </div>
                 </div>
                     <div class="gallDrop">
                         <label class="gallary">Gallary</label>
@@ -18,14 +23,12 @@
                         </div>
                     </div>    
                     <label class="borderL">|</label>
-                    <label class="options">Reviews</label>
-                    <label class="borderL">|</label>
                     <label class="options">About</label>
                     <label class="borderL">|</label>
                     <label class="options">Contact</label>
                 
                 <div class="info">
-                    <label class="email">wynand@gmail.com</label>
+                    <label class="email">.....@gmail.com</label>
                     <label class="phone">089 1234 789</label>
                 </div>
             </div>
@@ -33,10 +36,61 @@
         
             <div class="menu">
                 
-            </div><br><br><br><br><br><br>
-        <div class="image">
-            <img src="img/1.jpg"></img>
-        </div>
-        
+            </div><br><br><br>
+          
+            
+            
+            <label class="welcome" style="position:fixed;">WS-Pools</label><br>
+            <div class="content">
+                <label>Welcome to WS-Pools</label><br>
+                
+                <label style="font-size:20px;"></label><br>
+            </div><br>
+            <div id="div1" class="picDiv">
+                <img id="imgId" src="img/1.jpg" class="img1"></img>
+            </div>
+            
+            <script>
+                
+                
+                let c=1;
+                let fade;
+                let fadeI;
+                let o=1;
+                function fadeOut()
+                {
+                    let imgId=document.getElementById("imgId");
+                    o=o-0.01;
+                    imgId.setAttribute("style","opacity:"+o.toString());
+                    if(o<=0)
+                    {
+                        c++;
+                        if(c==6)
+                        {
+                            c=1;
+                        }
+                        clearInterval(fade);
+                        imgId.src="img/"+c.toString()+".jpg";
+                        fadeI=setInterval(fadeIn,10);
+                    }
+                }
+                function timeOut()
+                {
+                    fade=setInterval(fadeOut,10);
+                }
+                setTimeout(timeOut,3000);
+                function fadeIn()
+                {
+                    let imgId=document.getElementById("imgId");
+                    o=o+0.01;
+                    imgId.setAttribute("style","opacity:"+o.toString());
+                    if(o>=1)
+                    {
+                        clearInterval(fadeI);
+                        setTimeout(timeOut,3000);
+                    }
+                    
+                }
+            </script>
     </body>
 </html>
